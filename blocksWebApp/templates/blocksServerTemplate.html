@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, bem-vindo ao site da impressora BLOCKS</title> 
+    <style>
+        #dropzone {
+            width: 400px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #aaa;
+        }
+        #dropzone.over {
+            background-color: #f0f0f0;
+            border-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="drop_overlay">
+        <div id="drop_overlay_background"></div>
+        <div id="drop_overlay_wrapper">
+            <div class="dropzone" id="dropzone">
+                <span class="text">
+                    <i class="fas fa-upload"></i><br>{{ 'Upload' }}
+                </span>
+            </div>
+            <div class="dropzone_background" id="drop_background"></div>
+        </div>
+    </div>
+    <script >
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropZone = document.querySelector("#dropzone");
+
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const files = e.dataTransfer.files;
+                uploadFiles(files);
+            });
+
+            function uploadFiles(files) {
+                let formData = new FormData();
+                for (let i = 0; i < files.length; i++) {
+                    formData.append("file", files[i]);
+                }
+
+                let port_actual = "{{ port_actual }}" ;
+
+                fetch(`http://localhost:${port_actual}/upload`, { //de modo a que mesmo que a port mude o link funcione
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => console.log("Upload concluído", data))
+                .catch(error => console.error("Erro no upload", error));
+            }
+        });
+    </script> 
+</body>    
+</html>

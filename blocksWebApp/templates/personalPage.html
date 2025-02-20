@@ -1,0 +1,20 @@
+{% block title %}
+  <title>Bem-vindo</title>
+{% endblock %}
+
+<h1>Bem-vindo, {{user_name}}</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página pessoal</title>    
+</head>
+<body>
+    <a href="/users/{{ user_name }}">
+        <button style="font-size:25px; background-color:rgb(0, 0, 0); color:rgb(255, 255, 255); border-radius:25px;">USERS</button>
+    </a>
+    <a href="/home/upload">
+        <button style="font-size:25px; background-color:rgb(0, 0, 0); color:rgb(255, 255, 255); border-radius:25px;">UPLOAD</button>
+    </a>
+</body>

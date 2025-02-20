@@ -1,0 +1,39 @@
+<!-- Fonte: "Python Website Full Tutorial - Flask, Authentication, Databases & More"
+ by: Tech With Tim on YouTube.com (https://youtu.be/dam0GPOAvVI?feature=shared) -->
+
+ <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Olá, bem-vindo ao site da impressora BLOCKS</title> 
+      <style>
+          #dropzone {
+              width: 400px;
+              height: 200px;
+              border: 2px dashed #ccc;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #aaa;
+          }
+          #dropzone.over {
+              background-color: #f0f0f0;
+              border-color: #000;
+          }
+      </style>
+  </head>
+  <body>
+      <div id="drop_overlay">
+          <div id="drop_overlay_background"></div>
+          <div id="drop_overlay_wrapper">
+              <div class="dropzone" id="dropzone">
+                  <span class="text">
+                      <i class="fas fa-upload"></i><br>{{ _('Upload') }}
+                  </span>
+              </div>
+              <div class="dropzone_background" id="drop_background"></div>
+          </div>
+      </div>
+  </body>    
+</html>

@@ -1,0 +1,34 @@
+DEBUG | 2025-02-20 15:16:45,266 | MainThread : Using proactor: IocpProactor
+DEBUG | 2025-02-20 15:32:00,355 | MainThread : Using proactor: IocpProactor
+DEBUG | 2025-02-20 15:43:20,928 | MainThread : Using proactor: IocpProactor
+DEBUG | 2025-02-20 15:43:51,360 | MainThread : Using proactor: IocpProactor
+DEBUG | 2025-02-20 15:49:39,608 | MainThread : Using proactor: IocpProactor
+INFO | 2025-02-20 15:49:45,401 | MainThread : Página de Login acessada
+INFO | 2025-02-20 15:49:45,401 | MainThread : 200 GET /login (::1) 8.12ms
+INFO | 2025-02-20 15:49:48,380 | MainThread : Acesso bem executado
+INFO | 2025-02-20 15:49:48,380 | MainThread : 200 GET / (::1) 34.77ms
+WARNING | 2025-02-20 15:49:48,429 | MainThread : 404 GET /favicon.ico (::1) 0.00ms
+INFO | 2025-02-20 15:49:50,234 | MainThread : Página de Login acessada
+INFO | 2025-02-20 15:49:50,234 | MainThread : 304 GET /login (::1) 1.70ms
+INFO | 2025-02-20 15:49:56,453 | MainThread : POST RECEBEU USER: user1 e PASS: lalala
+INFO | 2025-02-20 15:49:56,455 | MainThread : 302 POST /login (::1) 2.54ms
+INFO | 2025-02-20 15:49:56,463 | MainThread : Página Pessoal acessada por user1
+INFO | 2025-02-20 15:49:56,466 | MainThread : Página Pessoal acessada por user1 e o template apareceu
+INFO | 2025-02-20 15:49:56,466 | MainThread : 200 GET /personalpage (::1) 6.75ms
+INFO | 2025-02-20 15:49:57,612 | MainThread : Os utilizadores do user1 foram apresentados
+INFO | 2025-02-20 15:49:57,613 | MainThread : 304 GET /users/user1 (::1) 6.55ms
+INFO | 2025-02-20 15:50:00,405 | MainThread : 200 GET /home/upload (::1) 46.84ms
+DEBUG | 2025-02-20 15:51:04,119 | MainThread : Using proactor: IocpProactor
+INFO | 2025-02-20 15:51:20,351 | MainThread : Acesso bem executado
+INFO | 2025-02-20 15:51:20,352 | MainThread : 200 GET / (::1) 9.44ms
+WARNING | 2025-02-20 15:51:20,450 | MainThread : 404 GET /favicon.ico (::1) 2.00ms
+INFO | 2025-02-20 15:51:22,029 | MainThread : Página de Login acessada
+INFO | 2025-02-20 15:51:22,029 | MainThread : 200 GET /login (::1) 0.00ms
+INFO | 2025-02-20 15:51:30,128 | MainThread : POST RECEBEU USER: user3 e PASS: slslsls
+INFO | 2025-02-20 15:51:30,131 | MainThread : 302 POST /login (::1) 2.51ms
+INFO | 2025-02-20 15:51:30,133 | MainThread : Página Pessoal acessada por user3
+INFO | 2025-02-20 15:51:30,139 | MainThread : Página Pessoal acessada por user3 e o template apareceu
+INFO | 2025-02-20 15:51:30,141 | MainThread : 200 GET /personalpage (::1) 8.24ms
+INFO | 2025-02-20 15:51:33,142 | MainThread : Os utilizadores do user3 foram apresentados
+INFO | 2025-02-20 15:51:33,142 | MainThread : 200 GET /users/user3 (::1) 1.71ms
+INFO | 2025-02-20 15:51:35,824 | MainThread : 200 GET /home/upload (::1) 48.74ms
