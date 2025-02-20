@@ -250,8 +250,6 @@ class StackedWidget(QStackedWidget):
             level_text = self.level_mapping.get(level)
             combo.setCurrentText(level_text)
             
-            new_lvl = int([key for key, value in self.level_mapping.items() if value == combo.currentText()][0])
-            
             combo.currentIndexChanged.connect(partial(self.handle_update_lvl, username, combo))
 
             self.ui.admin_table.setItem(index, 0, QTableWidgetItem(username))
